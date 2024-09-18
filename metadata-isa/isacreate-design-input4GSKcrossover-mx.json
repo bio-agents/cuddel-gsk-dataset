@@ -1,0 +1,100 @@
+{
+    "qc_planning": {
+        "qc_plans": [
+            {
+                "qc_type": {
+                    "qc_type_selector": "pre_dilution_series",
+                    "values": "10,10,10,10,10,10,10,10,10,10",
+                    "quantity_type": "Amount in ml"
+                },
+                "material_type": "reference compound mix (MSIO:0000024)"
+            }
+        ]
+    },
+    "treatment_plan": {
+        "study_type": {
+            "balance": {
+                "balanced_groups": true,
+                "multiple_interventions": {
+                    "intervention_type_selector": "behavioural intervention",
+                    "multiple_interventions_selector": "single",
+                    "group_size": "3",
+                    "study_groups": [
+                        {
+                            "factor_values": "food+,exercise+,male"
+                        },
+                        {
+                            "factor_values": "food+,exercise-,male"
+                        },
+                        {
+                            "factor_values": "food-,exercise-,male"
+                        },
+                        {
+                            "factor_values": "food-,exercise+,male"
+                        },
+                        {
+                            "factor_values": "food+,exercise+,female"
+                        },
+                        {
+                            "factor_values": "food+,exercise-,female"
+                        },
+                        {
+                            "factor_values": "food-,exercise-,female"
+                        },
+                        {
+                            "factor_values": "food-,exercise+,female"
+                        }                        
+                    ],
+                    "study_factors": "food,exercise,gender"
+                }
+            },
+            "study_type_selector": "full factorial design"
+        }
+    },
+    "sample_and_assay_planning": {
+        "sample_plans": [
+            {
+                "material_type": "blood (UBERON:0000178)",
+                "sample_collections": 8,
+                "assay_plans": [
+                    {
+                        "assay_type": {
+                            "injections": [
+                                {
+                                    "injection_mode": {
+                                        "acquisitions": [
+                                            {
+                                                "acquisition_mode": "negative",
+                                                "technical_replicates": 1
+                                            },
+                                             {
+                                                "acquisition_mode": "positive",
+                                                "technical_replicates": 1
+                                            }                                           
+                                        ],
+                                        "chromatography_instrument": "Thermo Scientific TRACE GC Ultra",
+                                        "injection_mode_selector": "GC",
+                                        "derivatizations": [],
+                                        "instrument": "Thermo Scientific LTQ Orbitrap"
+                                    }
+                                }
+                            ],
+                            "sample_fractions": [],
+                            "assay_type_selector": "ms"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "study_metadata": {
+        "first_name": "First name",
+        "last_name": "Last Name",
+        "description": "Study Description",
+        "study_use_condition": "collaboration required (DUO:0000020)",
+        "title": "Study Title",
+        "affiliation": "Affiliation",
+        "email": "email__at__email.com",
+        "study_consent": "disease-specific research and clinical care (DUO:0000007)"
+    }
+}
